@@ -1,4 +1,5 @@
 <?php
-function isOk(): bool{
-  return $GLOBALS['A'] && $GLOBALS['B'] || $GLOBALS['C'];
+function isSunday(): bool{
+  $date = new DateTime();
+  return $date->format('w') === '0';
 }
